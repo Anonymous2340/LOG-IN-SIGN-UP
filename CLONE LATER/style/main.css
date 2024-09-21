@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-theme-bg1: #3e3e55;
+    --main-theme-bg3: #282828;
+    --main-font-color: #ccc;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-font-color);
+}
+body{
+    background-color: var(--main-theme-bg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper {
+    width: 400px;
+    height: auto;
+    /* padding: 30px; */
+    display: flex;
+}
+.wrapper form {
+    flex: 1;
+    display: flex; 
+    /* width: 100%; */
+}
+form .inner-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+form div {
+    flex: 1;
+}
+form .input-wrapper {
+    position: relative;
+    /* border: 1px solid #ccc; */
+    display: flex;
+    margin: 10px 0;
+}
+.inner-wrapper #user-dont-exist, #password-not-match, #create_username_alert {
+    color: red;
+    font-size: 1em;
+    text-align: center;
+}
+.input-wrapper .icon-wrapper {
+    position: absolute;
+    left: -1%;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    background-color: var(--main-theme-bg1);
+}
+.icon-wrapper svg {
+    width: 32px;    
+    padding: 3.5px;
+    height: 28px;
+}
+.inner-wrapper input {
+    padding: 10px 0 10px 0;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    outline: none;
+}
+.inner-wrapper .profile-logo {
+    display: flex;
+    flex: unset;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #ccc;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0px 0 10px 0;
+    position: relative;
+}
+.inner-wrapper h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0 40px 0;
+}
+.profile-logo svg {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid #fff; */
+    width: auto;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+.profile-logo svg:last-child {
+    position: absolute;
+    left: 15%;
+    right: 0;
+}
+.profile-logo .active {
+    opacity: 1;
+    visibility: visible;
+}
+.inner-wrapper .linear-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0 10px 0;
+}
+.linear-input-wrapper .radio {
+    position: relative;
+}
+.radio input[type=radio] {
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    opacity: 0;
+}
+.radio i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1em;
+    line-height: -10px;
+    padding: 0 5px 0 0;
+    z-index: -1;
+}
+.linear-input-wrapper label {
+    font-size: 0.8em;
+    padding: 0 0 0 0;
+}
+.linear-input-wrapper #forgot-password a {
+    font-size: 0.8em;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin:  0 0 0 60px;
+}
+.linear-input-wrapper #forget-password a:active {
+    color: #fff;
+}
+.inner-wrapper .button-wrapper {
+    margin: 5px 0 5px 0;
+}
+.inner-wrapper .button-wrapper button, .button-wrapper a {
+    padding: 3px 20px;
+    color: var(--main-theme-bg1);
+    font-weight: 700;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.button-wrapper a {
+    display: block;
+}
+.button-wrapper button[type=submit] {
+    background-color: orange;
+    padding: 10px 80px;
+    border-radius: 20px;
+    margin: 30px 0 0 0;
+}
+.inner-wrapper #not-a-member {
+    font-size: 0.9em;
+    margin: 10px 0 0 0;
+}
+.button-wrapper a {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    margin: 10px 0 0 0;
+}
